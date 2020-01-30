@@ -1,2 +1,2 @@
 # clas299
-Repo for Archaeological Data Analysis
+Repository for Archaeological Data Analysis (Clas-299)
