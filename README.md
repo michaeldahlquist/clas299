@@ -1,1 +1,3 @@
-# Michael Dahlquist's Portfolio for clas299
+# Michael Dahlquist's Portfolio
+
+Module 1 - Coin Analysis
