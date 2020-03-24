@@ -1,3 +1,3 @@
-## This is my portfolio for clas299
+# Michael Dahlquist's portfolio for clas299
 
-# Michael Dahlquist
+This is my portfolio for clas299 - Archaeological Data Analysis
