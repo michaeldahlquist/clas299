@@ -2,7 +2,7 @@
 
 This notebook contains scala scripts that analyze ptolemys spatial data, and corrects it to modern day standard longitude and latitutde coordinates. This data is then formatted into a csv for export.
 
-<p>There’s a <a href="https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb">Jupyter notebook</a> to run the following blocks of scala code. 
+There’s a [Jupyter notebook](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb) to run the following blocks of scala code. 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb)
 
