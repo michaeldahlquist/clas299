@@ -1,3 +1,9 @@
+<center>
+<a href="https://michaeldahlquist.github.io/clas299">
+<img border="0" alt="Home" src="https://raw.githubusercontent.com/michaeldahlquist/clas299/master/images/home.png" width="100" height="100">
+</a>
+</center>
+
 # Jupyter notebook for Ptolemny's Spatial Analysis scala script for csv
 
 This notebook contains scala scripts that analyze the authorities issuing coins during the roman empire. 
