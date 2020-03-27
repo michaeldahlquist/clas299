@@ -4,11 +4,9 @@
 
 [Repository for Archaeological Data Analysis (CLAS-299)](https://github.com.michaeldahlquist/clas299)
 
-Project's:
+# Project's:
 
+## [Ptolemy Spatial Analysis](https://michaeldahlquist.github.io/clas299/ptolemy)
 
-
-Module 1: Uploaded
-
-Module 2:
+## [Coins of the Roman Empire](https://michaeldahlquist.github.io/clas299/coins-of-the-roman-empire)
 
