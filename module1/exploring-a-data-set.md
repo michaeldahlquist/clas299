@@ -1,4 +1,4 @@
-# Archaeological Data Analysis: lab module 1
+# Archaeological Data Analysis: Coin issuing of the Roman Empire
 
 ### Author:  Michael Dahlquist
 
@@ -97,7 +97,8 @@ val denominationsGrouped = denominations.groupBy(denom => denom)
 if (denominationsGrouped.size == denominations.distinct.size) {
     println("Number of groups is same as number of distinct values.")
 } else {
-    println("Something is terribly wrong.  The number of groups is not the same as the number of distinct values.")
+    print("Something is terribly wrong.  The number of groups ")
+    println("is not the same as the number of distinct values.")
 }
 ```
 
@@ -115,8 +116,11 @@ Recall that `Map`s are not ordered in Scala. If we now convert the `Map` to a `V
 
 
 ```scala
-val denominationsVector = denominationsCounts.toVector
-val denominationsHisto = denominationsCounts.toVector.sortBy(frequency => frequency._2).reverse
+val denominationsVector = 
+    denominationsCounts.toVector
+val denominationsHisto = 
+    denominationsCounts.toVector.sortBy(frequency 
+                                        => frequency._2).reverse
 ```
 
 Now we can easily see the extremes of the counts:
@@ -130,7 +134,8 @@ println("Most frequent denomination: " + denominationsHisto.head)
 ```scala
 // Find denominations occurring fewer than some threshhold number of times
 val cutOff = 10 
-val leastDenominations = denominationsHisto.filter(frequency => frequency._2 < cutOff)
+val leastDenominations = 
+    denominationsHisto.filter(frequency => frequency._2 < cutOff)
 println("Least frequent denominations: \n" + leastDenominations.mkString("\n"))
 ```
 
@@ -147,8 +152,8 @@ Analyze how many issues are produced by each issuing authority to answer the fol
 
 
 ```scala
-// First, to extract the "Authority" column from the data set, uncomment and complete the following line:
-// val authorities = ??
+// First, to extract the "Authority" column from the data set, uncomment 
+// and complete the following line:
 val authorities = data.map(columns => columns(4))
 ```
 
@@ -158,8 +163,8 @@ val authorities = data.map(columns => columns(4))
 
 
 ```scala
-// Use the distinct method and size method to count how many distinct values you have in `authorities`
-// authorities.??
+// Use the distinct method and size method to count 
+// how many distinct values you have in `authorities`
 authorities.distinct.size
 ```
 
@@ -169,8 +174,6 @@ authorities.distinct.size
 ```scala
 // use the groupBy method to group each auhority by the authority value.
 // This will give you a Map of Strings to a Vector of Strings
-// 
-// val authoritiesGrouped = ??
 val authoritiesGrouped = authorities.groupBy(authority => authority)
 ```
 
@@ -179,18 +182,16 @@ val authoritiesGrouped = authorities.groupBy(authority => authority)
 // now convert each pairing of String->Vector[String] to a String->Int counting 
 // how many elements are in the original Vector.
 // The result is a Map[String->Int].
-//
-// val authoritiesCounts = authoritiesGrouped.map{ ?? }
 val authoritiesCounts = authoritiesGrouped.map{ case (auth,v) => (auth, v.size)}
 ```
 
 
 ```scala
-// next convert your Map[String->Int] to a Vector.  The result is a Vector of pairings of (String, Int).
-// We'll sort this by the second element of the pairing, namely the Int.  Since we sort from smallest to largest
+// next convert your Map[String->Int] to a Vector.  The result is a 
+// Vector of pairings of (String, Int).
+// We'll sort this by the second element of the pairing, namely the Int.  
+// Since we sort from smallest to largest
 // by default, you can reverse the result so that the 
-//
-// val authoritiesHistogram = authoritiesCounts.??
 val authoritiesHistogram = authoritiesCounts.toVector.sortBy(auth => auth._2).reverse
 ```
 

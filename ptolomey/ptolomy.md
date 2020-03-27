@@ -121,7 +121,9 @@ If we wanted to create a rescaled version of the first longitude, latitude pair,
 
 
 ```scala
-val firstRescaled = GeoPoint(firstPoint.id, firstPoint.lon * ratio, firstPoint.lat * ratio)
+val firstRescaled = GeoPoint(firstPoint.id, 
+                             firstPoint.lon * ratio, 
+                             firstPoint.lat * ratio)
 firstPoint
 ```
 
@@ -131,7 +133,11 @@ Now create a Vector of `GeoPoint` objects.  Verify that you have the same number
 
 
 ```scala
-val ptolemyRescaled = ptolemyGeo.map( pt => GeoPoint(pt.id, pt.lon * ratio, pt.lat * ratio))
+val ptolemyRescaled = ptolemyGeo.map( pt => 
+                                     GeoPoint(
+                                       pt.id, 
+                                       pt.lon * ratio, 
+                                       pt.lat * ratio))
 ```
 
 ## 2. Adjust origin of longitude
@@ -146,7 +152,10 @@ The following cell creates a `GeoPoint` adjusting Ptolemy's origin of longitude 
 // negative because Ptolemy's 0 is *west* of Greenwich:
 val originLongitude = -12.8
 firstRescaled
-val firstLonAdjusted = GeoPoint(firstRescaled.id, firstRescaled.lat, firstRescaled.lon + originLongitude)
+val firstLonAdjusted = GeoPoint(firstRescaled.id, 
+                                firstRescaled.lat, 
+                                firstRescaled.lon + 
+                                       originLongitude)
 ```
 
 ### Task: create a Vector of points with adjusted longitude
@@ -156,7 +165,12 @@ val firstLonAdjusted = GeoPoint(firstRescaled.id, firstRescaled.lat, firstRescal
 ```scala
 // Map your existing ptolemyRescaled Vector:
 
-val ptolemyLonAdjusted = ptolemyRescaled.map( pt => GeoPoint(pt.id, pt.lat, pt.lon + originLongitude) )
+val ptolemyLonAdjusted = ptolemyRescaled.map( pt => 
+                                             GeoPoint(
+                                               pt.id, 
+                                               pt.lat, 
+                                               pt.lon + 
+                                                originLongitude))
 ```
 
 ## 3. Adjust base of latitude
@@ -175,7 +189,10 @@ val offset = rhodesRaw - rhodesAdjusted
 
 
 ```scala
-val firstLonLatAdjusted = GeoPoint(firstLonAdjusted.id, firstLonAdjusted.lat + offset, firstLonAdjusted.lon)
+val firstLonLatAdjusted = GeoPoint(firstLonAdjusted.id, 
+                                   firstLonAdjusted.lat + 
+                                        offset, 
+                                   firstLonAdjusted.lon)
 ```
 
 ### Task: create a Vector of points with all three adjustments
@@ -184,7 +201,10 @@ val firstLonLatAdjusted = GeoPoint(firstLonAdjusted.id, firstLonAdjusted.lat + o
 ```scala
 // Map the existing ptolemyLonAdjusted Vector:
 
-val ptolemyAdjusted = ptolemyLonAdjusted.map(pt => GeoPoint(pt.id, pt.lat + offset, pt.lon))
+val ptolemyAdjusted = 
+    ptolemyLonAdjusted.map(pt => GeoPoint(pt.id, 
+                                          pt.lat + offset, 
+                                          pt.lon))
 ```
 
 
