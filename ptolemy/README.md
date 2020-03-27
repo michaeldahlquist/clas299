@@ -20,6 +20,10 @@ In either case, you will want to write your adjusted data to a `.csv` file you c
 
 A Jupyter notebook on mybinder won't have access to your host computer's file system, so you'll have to print out the values in your notebook, and copy and paste them in to a file on your computer.  If you're running the code in a local environment like Atom, you can write the output directly from your Scala code.  The instructions at the end of this notebook will show you how to do both of these things.
 
+# Best way to execute scala code in jupyter notebook
+
+This file alternates between plain text and blocks of code. To ensure all lines run, please execute each block of code as you go by clicking the box of code and pressing `control` and `enter`. Alternatively, you can go to `cell` -> `run all` to execute the enter page now.
+
 
 ## Load data for Ptolemy
 
@@ -110,6 +114,8 @@ This makes it very straightforward to map the Vector of ptolemy points to a new 
 ```scala
 val ptolemyGeo = ptolemyPoints.map(pt => GeoPoint(pt.id, pt.lon, pt.lat))
 ```
+
+### Verify the size is the same
 
 
 ```scala
@@ -206,6 +212,8 @@ val ptolemyAdjusted =
                                           pt.lat + offset, 
                                           pt.lon))
 ```
+
+### Verify the size is the same
 
 
 ```scala

@@ -1,4 +1,4 @@
-# Archaeological Data Analysis: Coin issuing of the Roman Empire
+# Archaeological Data Analysis: Coins of the Roman Empire
 
 ### Author:  Michael Dahlquist
 
@@ -7,6 +7,10 @@
 In this notebook, you'll download a data set derived from the openly licensed content of the [Online Coins of the Roman Empire](http://numismatics.org/ocre/) (OCRE). The original data set is available from <http://nomisma.org/> RDF XML format.  We'l work with a version formatted as a delimited-text file, using `#` as the column delimiter, with a header line labelling each column.
 
 As with any data set, our first task is to figure out what kinds of data it contains, and what the range of values are for each category of data. We'll examine the contents of several columns of data.
+
+# Best way to execute scala code in jupyter notebook
+
+This file alternates between plain text and blocks of code. To ensure all lines run, please execute each block of code as you go by clicking the box of code and pressing `control` and `enter`. Alternatively, you can go to `cell` -> `run all` to execute the enter page now.
 
 
 
@@ -159,7 +163,7 @@ val authorities = data.map(columns => columns(4))
 
 ### Question 1: how many authorities strike coins?
 
-
+* 131 authorities
 
 
 ```scala
@@ -195,7 +199,16 @@ val authoritiesCounts = authoritiesGrouped.map{ case (auth,v) => (auth, v.size)}
 val authoritiesHistogram = authoritiesCounts.toVector.sortBy(auth => auth._2).reverse
 ```
 
-### Questions 2 and 3: who strikes the most issues? the fewest?
+### Questions 2: who strikes the most issues? 
+
+* Constantine I with 4096
+
+### Question 3: who strikes the fewest?
+
+* Sponsianus with 1
+* Mar Silbannacus with 1
+* Domitian II with 1
+* Saturnius with 1
 
 
 ```scala
