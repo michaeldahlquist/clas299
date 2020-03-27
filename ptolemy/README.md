@@ -274,6 +274,7 @@ If you're running the Jupyter notebook on `mybinder.org`, use `println` to displ
 ```scala
 println(header + csv)
 ```
+### You can find the `csv` data [here.](https://github.com/michaeldahlquist/clas299/blob/master/ptolemy/ptolemy.csv)
 
 ## Load your CSV file into QGIS and visualize!
 
