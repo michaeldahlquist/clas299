@@ -1,3 +1,15 @@
+# Jupyter notebook for Ptolemny's Spatial Analysis scala script for csv
+
+This notebook contains scala scripts that analyze ptolemys spatial data, and corrects it to modern day standard longitude and latitutde coordinates. This data is then formatted into a csv for export.
+
+<p>There’s a <a href="https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb">Jupyter notebook</a> to run the following blocks of scala code. 
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb)
+
+The resulting data is [available here.](https://github.com/michaeldahlquist/clas299/blob/master/ptolemy/ptolemy.csv)
+
+***
+
 # Analyzing Ptolemy's geographic data
 
 ## Overview
@@ -7,7 +19,6 @@ This notebook will help you adjust Ptolemy's values for longitude and latitude t
 - his mistakenly small dimension of the earth's circumference
 - his origin of longitude (ca. 12.8 degrees west of Greenwich)
 - his use of the "parallel through Rhodes" (36 degrees north latitude in Ptolemy's data) as the baseline for computing latitude values.
-
 
 ## Using your adjusted data in a GIS
 
@@ -19,11 +30,6 @@ You could use the contents of this notebook in several ways:
 In either case, you will want to write your adjusted data to a `.csv` file you can use directly in a GIS.
 
 A Jupyter notebook on mybinder won't have access to your host computer's file system, so you'll have to print out the values in your notebook, and copy and paste them in to a file on your computer.  If you're running the code in a local environment like Atom, you can write the output directly from your Scala code.  The instructions at the end of this notebook will show you how to do both of these things.
-
-# Best way to execute scala code in jupyter notebook
-
-This file alternates between plain text and blocks of code. To ensure all lines run, please execute each block of code as you go by clicking the box of code and pressing `control` and `enter`. Alternatively, you can go to `cell` -> `run all` to execute the enter page now.
-
 
 ## Load data for Ptolemy
 
