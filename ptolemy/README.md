@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="100" height="100" src="https://raw.githubusercontent.com/michaeldahlquist/clas299/master/images/home.png" href="https://michaeldahlquist.github.io/clas299">
+</p>
+
 # Jupyter notebook for Ptolemny's Spatial Analysis scala script for csv
 
 This notebook contains scala scripts that analyze ptolemys spatial data, and corrects it to modern day standard longitude and latitutde coordinates. This data is then formatted into a csv for export.
