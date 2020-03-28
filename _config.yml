@@ -1,6 +1,11 @@
 title: clas299 portfolio
 description: 
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
 
 url: https://michaeldahlquist.github.io/clas299
+
+header_pages:
+  ptolemy/README.md
+  README.md
+  
