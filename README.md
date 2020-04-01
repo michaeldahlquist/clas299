@@ -1,4 +1,4 @@
-# Michael Dahlquist's Portfolio for clas299
+# clas299
 
 Here is the link to mybinder to run the entire repository of jupyter notebooks:
 
