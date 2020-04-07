@@ -43,16 +43,16 @@ You can use an existing code library to read an XML edition of Ptolemy's *Geogra
 
 
 ```scala
-// 1. Add maven repository where we can find our libraries
+// 1. Add two maven maven repositories where we can find our libraries
 val myBT = coursierapi.MavenRepository.of("https://dl.bintray.com/neelsmith/maven")
-interp.repositories() ++= Seq(myBT)
-
+val beta = coursierapi.MavenRepository.of("http://beta.hpcc.uh.edu/nexus/content/groups/public")
+interp.repositories() ++= Seq(myBT, beta)
 ```
 
 
 ```scala
 // 2. Make libraries available with `$ivy` imports:
-import $ivy.`edu.holycross.shot::ptolemy:1.2.1`
+import $ivy.`edu.holycross.shot::ptolemy:1.6.0`
 import scala.xml._
 ```
 
@@ -67,8 +67,7 @@ val root = XML.load(url)
 ```scala
 // parse XML text into objects
 import edu.holycross.shot.ptolemy._
-val delimited = TeiParser.parseTEI(root, false)
-val ptolemyPoints = delimited.map(ln => PtolemyString(ln))
+val ptolemyPoints = TeiParser.geography(root).rawData
 ```
 
 Each of the `ptolemyPoints` objects has a `lon` and a `lat` member.
@@ -78,11 +77,11 @@ Look at the example of a single point in following cell to figure out what class
 
 ```scala
 val firstPoint = ptolemyPoints(0)
-firstPoint.id
 firstPoint.lon
 firstPoint.lat
-firstPoint.continent
-firstPoint.province
+//firstPoint.id
+//firstPoint.continent
+//firstPoint.province
 ```
 
 ## 1. Scale the data
