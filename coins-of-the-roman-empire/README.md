@@ -1,6 +1,6 @@
 <center>
 <a href="https://michaeldahlquist.github.io/clas299">
-<img border="0" alt="Home" src="/images/home_black.png" width="100" height="100">
+<img border="0" alt="Home" src="https://raw.githubusercontent.com/michaeldahlquist/clas299/master/images/home_black.png" width="75" height="75">
 </a>
 </center>
 
