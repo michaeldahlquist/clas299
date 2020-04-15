@@ -1,14 +1,16 @@
+<!--
 <center>
 <a href="https://michaeldahlquist.github.io/clas299">
 <img border="0" alt="Home" src="/clas299/images/home_black.png" width="75" height="75">
 </a>
 </center>
+-->
 
 # Jupyter notebook for Ptolemny's Spatial Analysis scala script for csv
 
 This notebook contains scala scripts that analyze ptolemys spatial data, and corrects it to modern day standard longitude and latitutde coordinates. This data is then formatted into a csv for export.
 
-There’s a [Jupyter notebook](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb) to run the following blocks of scala code. 
+There’s a [Jupyter notebook](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb) to execute the following blocks of scala code. 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ptolemy%2Fptolemy.ipynb)
 

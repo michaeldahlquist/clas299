@@ -1,6 +1,16 @@
-# Ancient Lycia Necropoleis (Southwestern Turkey Cemetery Site)
+<!--
+<center>
+<a href="https://michaeldahlquist.github.io/clas299">
+<img border="0" alt="Home" src="/clas299/images/home_black.png" width="75" height="75">
+</a>
+</center>
+-->
 
-There’s a [Jupyter notebook](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ancient-lycia-tombs%2Fancient-lycia-tombs.ipynb) to run the following blocks of scala code. 
+# Juypter Notebook for Ancient Lycia Necropoleis
+
+This notebook contains scala scripts that determine the total count of tombs are represented in the [data set](https://raw.githubusercontent.com/michaeldahlquist/clas299/master/ancient-lycia-tombs/lycianNecropoleis.cex).
+
+There’s a [Jupyter notebook](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ancient-lycia-tombs%2Fancient-lycia-tombs.ipynb) to execute the following blocks of scala code. 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/michaeldahlquist/clas299/master?filepath=ancient-lycia-tombs%2Fancient-lycia-tombs.ipynb)
 
@@ -69,4 +79,4 @@ Now we can use the `sum` method that will handily sum up a Vector of numeric val
 tombInts.sum
 ```
 
-## There are 1085 tombs
+### There are 1085 tombs
