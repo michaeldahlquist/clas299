@@ -38,7 +38,7 @@ We'll make the standard Scala `Source` object available by `import`ing it, then 
 
 ```scala
 import scala.io.Source
-val ocreCex = "https://raw.githubusercontent.com/neelsmith/nomisma/master/cex/ocre-cite-ids.cex"
+val ocreCex = "https://raw.githubusercontent.com/michaeldahlquist/clas299/master/coins-of-the-roman-empire/ocre-cite-ids.cex"
 ```
 
 We'll extract a sequence of lines from the URL source, and convert them to our favorite type of Scala collection, a `Vector`.
